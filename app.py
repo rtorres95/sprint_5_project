@@ -23,7 +23,7 @@ if hist_check:
     st.plotly_chart(fig)
 
 
-st.subheader("¿Cuál es el vehículo más viejo")
+st.subheader("¿Cuál es el vehículo más antigüo listado?")
 model_check = st.checkbox("Haz click aquí para averiguarlo")
 if model_check:
     st.dataframe(car_data[car_data["model_year"]
