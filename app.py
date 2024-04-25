@@ -37,3 +37,4 @@ but=st.button("Convertir archivos")
 if but:
     a=askopenfile()
     df=pd.read_excel(a)
+    st.dataframe(df)
