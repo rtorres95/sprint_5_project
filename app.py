@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import tkinter as tk
+from tkinter.filedialog import askopenfile
+
 
 car_data = pd.read_csv("vehicles_us.csv")
 car_data["model_year"] = car_data["model_year"].astype("int", errors="ignore")
@@ -28,3 +31,9 @@ model_check = st.checkbox("Haz click aquí para averiguarlo")
 if model_check:
     st.dataframe(car_data[car_data["model_year"]
                  == car_data["model_year"].min()])
+
+
+but=st.button("Convertir archivos")
+if but:
+    a=askopenfile()
+    df=pd.read_excel(a)
